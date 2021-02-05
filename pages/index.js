@@ -1,5 +1,11 @@
-function HomePage() {
-  return <div>Welcome to Next.js!</div>;
+function HomePage(props) {
+  return <div>Welcome to {props.title} </div>;
 }
+
+HomePage.getInitialProps = () => {
+  return {
+    title: "Flavio dev",
+  };
+};
 
 export default HomePage;
